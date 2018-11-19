@@ -102,24 +102,28 @@ execute(pp)
 		break;
 	  case 'h':
 		move_player(pp, LEFTS);
+		face(pp, LEFTS);
 		break;
 	  case 'H':
 		face(pp, LEFTS);
 		break;
 	  case 'j':
 		move_player(pp, BELOW);
+		face(pp, BELOW);
 		break;
 	  case 'J':
 		face(pp, BELOW);
 		break;
 	  case 'k':
 		move_player(pp, ABOVE);
+		face(pp, ABOVE);
 		break;
 	  case 'K':
 		face(pp, ABOVE);
 		break;
 	  case 'l':
 		move_player(pp, RIGHT);
+		face(pp, RIGHT);
 		break;
 	  case 'L':
 		face(pp, RIGHT);
