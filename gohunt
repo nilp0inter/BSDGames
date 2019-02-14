@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+export TERM=xterm
+~/huntd -s -p 5000
+exec ~/gotty --title-format hunt -w ~/hunt -p 5000 localhost
