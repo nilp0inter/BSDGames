@@ -119,7 +119,6 @@ main(ac, av, ep)
 # endif
 		  default:
 erred:
-			fprintf(stderr, "Usage: %s [-s] [-p port]\n", av[0]);
 			exit(1);
 		}
 	}
@@ -942,29 +941,19 @@ send_stats()
 	 */
 	fputs("Name\t\tScore\tDucked\tAbsorb\tFaced\tShot\tRobbed\tMissed\tSlimeK\n", fp);
 	for (ip = Scores; ip != NULL; ip = ip->i_next) {
-		fprintf(fp, "%s\t", ip->i_name);
 		if (strlen(ip->i_name) < 8)
 			putc('\t', fp);
-		fprintf(fp, "%.2f\t%d\t%d\t%d\t%d\t%d\t%d\t%d\n",
-			ip->i_score, ip->i_ducked, ip->i_absorbed,
-			ip->i_faced, ip->i_shot, ip->i_robbed,
-			ip->i_missed, ip->i_slime);
 	}
 	fputs("\n\nName\t\tEnemy\tFriend\tDeaths\tStill\tSaved\n", fp);
 	for (ip = Scores; ip != NULL; ip = ip->i_next) {
 		if (ip->i_team == ' ') {
-			fprintf(fp, "%s\t", ip->i_name);
 			if (strlen(ip->i_name) < 8)
 				putc('\t', fp);
 		}
 		else {
-			fprintf(fp, "%s[%c]\t", ip->i_name, ip->i_team);
 			if (strlen(ip->i_name) + 3 < 8)
 				putc('\t', fp);
 		}
-		fprintf(fp, "%d\t%d\t%d\t%d\t%d\n",
-			ip->i_gkills, ip->i_bkills, ip->i_deaths,
-			ip->i_stillb, ip->i_saved);
 	}
 
 	(void) fclose(fp);
