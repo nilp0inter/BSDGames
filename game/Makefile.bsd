@@ -5,10 +5,6 @@
 # Moved: chess
 # Don't belong: xneko xroach
 
-SUBDIR=	adventure arithmetic atc backgammon banner battlestar bcd boggle \
-	caesar canfield countmail cribbage dab dm factor fish fortune gomoku \
-	hack hangman hunt larn mille monop morse number phantasia pig pom ppt \
-	primes quiz rain random robots rogue sail snake tetris trek wargames \
-	worm worms wtf wump
+SUBDIR=	hunt
 
 .include <bsd.subdir.mk>

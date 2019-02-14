@@ -292,21 +292,21 @@ stplayer(newpp, enter_status)
 	}
 	newpp->p_ncshot = 0;
 
-	do {
-		x = rand_num(WIDTH - 1) + 1;
-		y = rand_num(HEIGHT - 1) + 1;
-	} while (Maze[y][x] != SPACE);
-	Maze[y][x] = GMINE;
+	/* do { */
+	/* 	x = rand_num(WIDTH - 1) + 1; */
+	/* 	y = rand_num(HEIGHT - 1) + 1; */
+	/* } while (Maze[y][x] != SPACE); */
+	/* Maze[y][x] = GMINE; */
 # ifdef MONITOR
 	for (pp = Monitor; pp < End_monitor; pp++)
 		check(pp, y, x);
 # endif
 
-	do {
-		x = rand_num(WIDTH - 1) + 1;
-		y = rand_num(HEIGHT - 1) + 1;
-	} while (Maze[y][x] != SPACE);
-	Maze[y][x] = MINE;
+	/* do { */
+	/* 	x = rand_num(WIDTH - 1) + 1; */
+	/* 	y = rand_num(HEIGHT - 1) + 1; */
+	/* } while (Maze[y][x] != SPACE); */
+	/* Maze[y][x] = MINE; */
 # ifdef MONITOR
 	for (pp = Monitor; pp < End_monitor; pp++)
 		check(pp, y, x);
